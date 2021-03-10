@@ -1,0 +1,13 @@
+.page {
+    &--header {
+        background: $clr-white;
+        box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    &__container {
+        padding: 0 1rem;
+        max-width: 120rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,107 @@
+.header {
+    &__top {
+        padding: 2rem 0 0;
+        @include flex-align-center;
+        justify-content: space-between;
+    }
+
+    &__top-content {
+        @include flex-align-center;
+    }
+
+    &__top-links {
+        @include flex-align-center;
+        margin-left: 2rem;
+    }
+
+    &__top-link {
+        &::before {
+            display: block;
+        }
+
+        &--notification::before {
+            content: url(../img/links/notifications.svg);
+        }
+
+        &--gifts::before {
+            content: url(../img/links/gifts.svg);
+        }
+
+        &--medium::before {
+            content: url(../img/links/medium.svg);
+        }
+    }
+
+    &__top-name {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        margin-right: 2rem;
+    }
+
+    &__top-account {
+        display: flex;
+        align-items: center;
+        &::after {
+            content: url(../img/arrow.svg);
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__bottom {
+        @include flex-align-center;
+        justify-content: space-between;
+    }
+
+    &__bottom-list {
+        @include flex-align-center;
+    }
+
+    &__bottom-item {
+        padding: 2.3rem 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: $clr-dark-grey;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 3.7rem;
+        }
+
+        &--active {
+            position: relative;
+            opacity: 1;
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                display: block;
+                content: "";
+                height: 0.4rem;
+                width: 100%;
+                background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+            }
+        }
+    }
+
+    &__bottom-btn {
+        width: 6.4rem;
+        height: 6.4rem;
+        border-radius: 50%;
+        display: flex;
+        border: none;
+        background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+        transform: translateY(50%);
+
+        &::before {
+            height: 2rem;
+            margin: auto;
+            display: block;
+            content: url(../img/add-btn.svg);
+        }
+    }
+}
