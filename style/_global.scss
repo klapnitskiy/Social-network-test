@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 
-$font-primary: "Open Sans", sans-serif;
-$font-secondary: "Montserrat", sans-serif;
+$font-primary: "Open Sans";
+$font-secondary: "Montserrat";
 
 $clr-white: #fff;
 $clr-bg-grey: #f2f2f2;
@@ -17,6 +17,7 @@ $clr-mandy: #ed5267;
 $clr-black-squeeze: #ecf1f8;
 $clr-boombay: #b2b3bb;
 $clr-biloba-flower: #c5adef;
+$clr-edit-btn: #f05d63;
 
 @font-face {
     font-family: $font-primary;
@@ -38,6 +39,7 @@ html {
 body {
     font-family: $font-primary;
     color: $clr-gun-powder;
+    background-color: $clr-bg-grey;
 }
 
 img {

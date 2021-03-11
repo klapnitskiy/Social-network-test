@@ -1,0 +1,23 @@
+@keyframes slideMenu {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes slideClosed {
+    from {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}

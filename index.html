@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style/style.css" />
+        <script src="./js/app.js" defer></script>
         <title>Swivl test</title>
     </head>
     <body>
@@ -57,5 +58,81 @@
                 </div>
             </div>
         </header>
+
+        <main class="page page--main">
+            <div class="page__container">
+                <section class="profile">
+                    <div class="profile__top">
+                        <div class="profile__details">
+                            <div class="profile__details-photo">
+                                <img
+                                    src="./img/avatar.webp"
+                                    alt="avatar"
+                                    class="profile__details-img"
+                                />
+                            </div>
+                            <div class="profile__details-user">
+                                <p class="profile__details-name">
+                                    Benjamin clementine
+                                </p>
+                                <p class="profile__details-nick">
+                                    @benclementine
+                                </p>
+                                <button class="profile__details-edit">
+                                    Edit profile
+                                </button>
+                            </div>
+                            <div class="profile__details-settings">
+                                <button class="profile__details-dots"></button>
+                                <div class="profile__details-options">
+                                    <span
+                                        class="profile__details-option profile__details-option--report"
+                                        >Report user</span
+                                    >
+                                    <span
+                                        class="profile__details-option profile__details-option--block"
+                                        >Block user</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__followers">
+                            <div class="profile__followers-item">
+                                <span class="profile__followers-counter"
+                                    >45</span
+                                >
+                                <span class="profile__followers-text"
+                                    >Synths</span
+                                >
+                            </div>
+                            <div class="profile__followers-item">
+                                <span class="profile__followers-counter"
+                                    >110</span
+                                >
+                                <span class="profile__followers-text"
+                                    >Followers</span
+                                >
+                            </div>
+                            <div class="profile__followers-item">
+                                <span class="profile__followers-counter"
+                                    >322</span
+                                >
+                                <span class="profile__followers-text"
+                                    >Following</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="profile__description">
+                        Cryptocurrencies including Ethereum, Ripple, and
+                        Litecoin have all plunged between 20 to 30 percent each,
+                        according to CoinMarketCap. Here is the latest Ripple
+                        price news and live updates on XRP, bitcoin and
+                        Ethereum.
+                    </p>
+                </section>
+            </div>
+        </main>
     </body>
 </html>

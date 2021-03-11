@@ -1,0 +1,156 @@
+.profile {
+    //temporary give it width
+    max-width: 35rem;
+    width: 100%;
+    position: relative;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        max-width: 28.9rem;
+        width: 100%;
+    }
+
+    &__details {
+        margin-bottom: 3.2rem;
+        display: flex;
+    }
+
+    &__details-photo {
+        border-radius: 50%;
+        max-width: 12rem;
+        max-height: 12rem;
+        width: 100%;
+        overflow: hidden;
+        margin-right: 2.4rem;
+    }
+
+    &__details-name {
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        text-transform: capitalize;
+        margin-bottom: 0.8rem;
+    }
+
+    &__details-nick {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: -0.05rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__details-edit {
+        @include flex-align-center;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: $clr-edit-btn;
+
+        &::before {
+            content: url(../img/edit-icon.svg);
+            margin-right: 0.8rem;
+            height: 2rem;
+        }
+    }
+
+    &__details-settings {
+        position: absolute;
+        top: 0;
+        right: 1.6rem;
+    }
+
+    &__details-dots {
+        // position: absolute;
+        // top: 0;
+        // right: 1.6rem;
+        &::before {
+            display: block;
+            content: url(../img/icon_3dots.svg);
+        }
+    }
+
+    &__details-options {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background-color: $clr-white;
+        border-radius: 0.8rem;
+        padding: 2.4rem 0;
+        mix-blend-mode: normal;
+        opacity: 0.94;
+        backdrop-filter: blur(21.7463px);
+
+        &--active {
+            display: block;
+            animation: slideMenu 0.5s ease-in-out;
+        }
+
+        &--closed {
+            animation: slideClosed 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+    }
+
+    &__details-option {
+        display: block;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: $clr-dark-grey;
+        white-space: nowrap;
+        padding: 0.8rem 2.3rem;
+        @include flex-align-center;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        &::before {
+            margin-right: 1.6rem;
+            height: 2rem;
+        }
+
+        &--block::before {
+            content: url(../img/icon_block.svg);
+        }
+
+        &--report::before {
+            content: url(../img/icon_report.svg);
+        }
+
+        &:hover {
+            background-color: $clr-black-squeeze;
+        }
+    }
+
+    &__followers {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.4rem;
+    }
+
+    &__followers-item {
+        @include flex-align-center;
+        flex-direction: column;
+    }
+
+    &__followers-counter {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+    }
+
+    &__followers-text {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 400;
+        text-transform: lowercase;
+    }
+
+    &__description {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
