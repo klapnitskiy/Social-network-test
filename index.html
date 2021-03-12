@@ -23,7 +23,7 @@
                                 >
                                 <img
                                     class="header__top-photo"
-                                    src="./img/account-photo.webp"
+                                    src="./img/account-photo.jpg"
                                     alt="account-photo"
                                 />
                             </div>
@@ -53,7 +53,23 @@
                             <li class="header__bottom-item">Explore</li>
                             <li class="header__bottom-item">Discussions</li>
                         </ul>
-                        <button class="header__bottom-btn"></button>
+                        <button class="page__button--plus">
+                            <svg
+                                class="header__bottom-svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M10.91 0H9.09v9.09H0v1.82h9.09V20h1.82v-9.09H20V9.09h-9.09V0z"
+                                    fill="#fff"
+                                />
+                            </svg>
+                        </button>
                     </nav>
                 </div>
             </div>
@@ -61,77 +77,177 @@
 
         <main class="page page--main">
             <div class="page__container">
-                <section class="profile">
-                    <div class="profile__top">
-                        <div class="profile__details">
-                            <div class="profile__details-photo">
-                                <img
-                                    src="./img/avatar.webp"
-                                    alt="avatar"
-                                    class="profile__details-img"
-                                />
+                <div class="main">
+                    <section class="profile">
+                        <div class="profile__top">
+                            <div class="profile__details">
+                                <div class="profile__details-photo">
+                                    <img
+                                        src="./img/avatar.jpg"
+                                        alt="avatar"
+                                        class="profile__details-img"
+                                    />
+                                </div>
+                                <div class="profile__details-user">
+                                    <p class="profile__details-name">
+                                        Benjamin clementine
+                                    </p>
+                                    <p class="profile__details-nick">
+                                        @benclementine
+                                    </p>
+                                    <button class="page__button--edit">
+                                        Edit profile
+                                    </button>
+                                </div>
+                                <div class="profile__details-settings">
+                                    <button
+                                        class="profile__details-dots"
+                                    ></button>
+                                    <div class="profile__details-options">
+                                        <span
+                                            class="profile__details-option profile__details-option--report"
+                                            >Report user</span
+                                        >
+                                        <span
+                                            class="profile__details-option profile__details-option--block"
+                                            >Block user</span
+                                        >
+                                    </div>
+                                </div>
                             </div>
-                            <div class="profile__details-user">
-                                <p class="profile__details-name">
-                                    Benjamin clementine
-                                </p>
-                                <p class="profile__details-nick">
-                                    @benclementine
-                                </p>
-                                <button class="profile__details-edit">
-                                    Edit profile
-                                </button>
-                            </div>
-                            <div class="profile__details-settings">
-                                <button class="profile__details-dots"></button>
-                                <div class="profile__details-options">
-                                    <span
-                                        class="profile__details-option profile__details-option--report"
-                                        >Report user</span
+                            <div class="profile__followers">
+                                <div class="profile__followers-item">
+                                    <span class="profile__followers-counter"
+                                        >45</span
                                     >
-                                    <span
-                                        class="profile__details-option profile__details-option--block"
-                                        >Block user</span
+                                    <span class="profile__followers-text"
+                                        >Synths</span
+                                    >
+                                </div>
+                                <div class="profile__followers-item">
+                                    <span class="profile__followers-counter"
+                                        >110</span
+                                    >
+                                    <span class="profile__followers-text"
+                                        >Followers</span
+                                    >
+                                </div>
+                                <div class="profile__followers-item">
+                                    <span class="profile__followers-counter"
+                                        >322</span
+                                    >
+                                    <span class="profile__followers-text"
+                                        >Following</span
                                     >
                                 </div>
                             </div>
                         </div>
-                        <div class="profile__followers">
-                            <div class="profile__followers-item">
-                                <span class="profile__followers-counter"
-                                    >45</span
-                                >
-                                <span class="profile__followers-text"
-                                    >Synths</span
-                                >
+                        <p class="profile__description">
+                            Cryptocurrencies including Ethereum, Ripple, and
+                            Litecoin have all plunged between 20 to 30 percent
+                            each, according to CoinMarketCap. Here is the latest
+                            Ripple price news and live updates on XRP, bitcoin
+                            and Ethereum.
+                        </p>
+                    </section>
+                    <section class="cards">
+                        <div class="cards__privacy">
+                            <span class="cards__privacy-item">Public</span>
+                            <input
+                                class="cards__privacy-checkbox"
+                                type="checkbox"
+                                name="privacy_check"
+                                id="privacy_check-1"
+                            />
+                            <span class="cards__privacy-item">Private</span>
+                        </div>
+                        <div class="cards__items">
+                            <div class="cards__item">
+                                <p class="cards__item-text">
+                                    New air routes that promise cheap flights in
+                                </p>
+                                <div class="cards__item-footer">
+                                    <div class="cards__item-author">
+                                        <div class="cards__item-img"></div>
+                                        <div class="cards__item-name">
+                                            Gregory Watkins
+                                        </div>
+                                    </div>
+                                    <button class="page__button--share">
+                                        Share
+                                    </button>
+                                </div>
                             </div>
-                            <div class="profile__followers-item">
-                                <span class="profile__followers-counter"
-                                    >110</span
-                                >
-                                <span class="profile__followers-text"
-                                    >Followers</span
-                                >
+
+                            <div class="cards__item">
+                                <p class="cards__item-text">
+                                    New air routes that promise cheap flights in
+                                </p>
+                                <div class="cards__item-footer">
+                                    <div class="cards__item-author">
+                                        <div class="cards__item-img"></div>
+                                        <div class="cards__item-name">
+                                            Gregory Watkins
+                                        </div>
+                                    </div>
+                                    <button class="page__button--share">
+                                        Share
+                                    </button>
+                                </div>
                             </div>
-                            <div class="profile__followers-item">
-                                <span class="profile__followers-counter"
-                                    >322</span
-                                >
-                                <span class="profile__followers-text"
-                                    >Following</span
-                                >
+
+                            <div class="cards__item cards__item--shared">
+
+                                <p class="cards__item-subtitle">Shared to <span class="cards__item-accent">#discussionaboutanimgttdds…<span></p>
+
+                                <p class="cards__item-text">
+                                    New air routes that promise cheap flights in
+                                </p>
+                                <div class="cards__item-footer">
+                                    <div class="cards__item-author">
+                                        <div class="cards__item-img"></div>
+                                        <div class="cards__item-name">
+                                            Gregory Watkins
+                                        </div>
+                                    </div>
+                                    <div class="cards__item-info">
+                                        <span class="cards__item-plays"
+                                            >88</span
+                                        >
+                                        <span class="cards__item-likes"
+                                            >24</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cards__item cards__item--shared">
+
+                                <p class="cards__item-subtitle cards__item-subtitle--via-link">Shared via weblink</p>
+
+                                <p class="cards__item-text">
+                                    New air routes that promise cheap flights in
+                                </p>
+                                <div class="cards__item-footer">
+                                    <div class="cards__item-author">
+                                        <div class="cards__item-img"></div>
+                                        <div class="cards__item-name">
+                                            Gregory Watkins
+                                        </div>
+                                    </div>
+                                    <div class="cards__item-info">
+                                        <span class="cards__item-plays"
+                                            >88</span
+                                        >
+                                        <span class="cards__item-likes"
+                                            >24</span
+                                        >
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <p class="profile__description">
-                        Cryptocurrencies including Ethereum, Ripple, and
-                        Litecoin have all plunged between 20 to 30 percent each,
-                        according to CoinMarketCap. Here is the latest Ripple
-                        price news and live updates on XRP, bitcoin and
-                        Ethereum.
-                    </p>
-                </section>
+                    </section>
+                </div>
             </div>
         </main>
     </body>
