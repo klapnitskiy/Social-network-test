@@ -7,8 +7,11 @@
     &__top {
         display: flex;
         flex-direction: column;
-        max-width: 28.9rem;
-        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            max-width: 28.9rem;
+            width: 100%;
+        }
     }
 
     &__details {
@@ -17,6 +20,7 @@
     }
 
     &__details-photo {
+        display: block;
         border-radius: 50%;
         max-width: 12rem;
         max-height: 12rem;
@@ -27,48 +31,34 @@
 
     &__details-name {
         font-family: $font-secondary;
-        font-weight: 600;
-        font-size: 2.4rem;
-        line-height: 2.6rem;
+
+        @include fontset(2.4rem, 2.6rem, 600);
+
         text-transform: capitalize;
         margin-bottom: 0.8rem;
     }
 
     &__details-nick {
-        font-size: 1.6rem;
-        line-height: 2rem;
+        @include fontset(1.6rem, 2rem);
+
         letter-spacing: -0.05rem;
         margin-bottom: 1.6rem;
-    }
-
-    &__details-edit {
-        @include flex-align-center;
-        font-size: 1.6rem;
-        line-height: 2rem;
-        text-transform: capitalize;
-        text-decoration: underline;
-        color: $clr-edit-btn;
-
-        &::before {
-            content: url(../img/edit-icon.svg);
-            margin-right: 0.8rem;
-            height: 2rem;
-        }
     }
 
     &__details-settings {
         position: absolute;
         top: 0;
-        right: 1.6rem;
+        right: 0;
+
+        @media screen and (min-width: 768px) {
+            right: 1.6rem;
+        }
     }
 
     &__details-dots {
-        // position: absolute;
-        // top: 0;
-        // right: 1.6rem;
         &::before {
             display: block;
-            content: url(../img/icon_3dots.svg);
+            content: url(../img/profile/icon_3dots.svg);
         }
     }
 
@@ -82,6 +72,7 @@
         padding: 2.4rem 0;
         mix-blend-mode: normal;
         opacity: 0.94;
+        box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.04);
         backdrop-filter: blur(21.7463px);
 
         &--active {
@@ -92,13 +83,18 @@
         &--closed {
             animation: slideClosed 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
+
+        @media screen and (max-width: 768px) {
+            left: unset;
+            right: 0;
+        }
     }
 
     &__details-option {
         display: block;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
+
+        @include fontset(1.6rem, 2.2rem, 600);
+
         color: $clr-dark-grey;
         white-space: nowrap;
         padding: 0.8rem 2.3rem;
@@ -112,11 +108,11 @@
         }
 
         &--block::before {
-            content: url(../img/icon_block.svg);
+            content: url(../img/profile/icon_block.svg);
         }
 
         &--report::before {
-            content: url(../img/icon_report.svg);
+            content: url(../img/profile/icon_report.svg);
         }
 
         &:hover {
@@ -136,21 +132,16 @@
     }
 
     &__followers-counter {
-        font-size: 1.8rem;
-        line-height: 2.4rem;
-        font-weight: 700;
+        @include fontset(1.8rem, 2.4rem, 700);
     }
 
     &__followers-text {
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-        font-weight: 400;
+        @include fontset(1.6rem, 2.4rem, 400);
+
         text-transform: lowercase;
     }
 
     &__description {
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
+        @include fontset(1.6rem, 2.4rem);
     }
 }

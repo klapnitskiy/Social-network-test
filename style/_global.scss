@@ -18,9 +18,11 @@ $clr-black-squeeze: #ecf1f8;
 $clr-boombay: #b2b3bb;
 $clr-biloba-flower: #c5adef;
 $clr-edit-btn: #f05d63;
+$clr-checkbox-border: #cecece;
 
 @font-face {
     font-family: $font-primary;
+    font-display: swap;
     src: url(../fonts/Open_Sans/OpenSans-Regular.ttf) format("opentype"),
         url(../fonts/Open_Sans/OpenSans-SemiBold.ttf) format("opentype"),
         url(../fonts/Open_Sans/OpenSans-Bold.ttf) format("opentype");
@@ -28,12 +30,21 @@ $clr-edit-btn: #f05d63;
 
 @font-face {
     font-family: $font-secondary;
+    font-display: swap;
     src: url(../fonts/Montserrat/Montserrat-Regular.ttf) format("opentype"),
         url(../fonts/Montserrat/Montserrat-SemiBold.ttf) format("opentype");
 }
 
 html {
     font-size: 62.5%;
+
+    @media screen and (max-width: 768px) {
+        font-size: 58.5%;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 53.5%;
+    }
 }
 
 body {
@@ -56,9 +67,4 @@ button {
     background: none;
     cursor: pointer;
     outline: none;
-}
-
-@mixin flex-align-center {
-    display: flex;
-    align-items: center;
 }
